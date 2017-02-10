@@ -1,0 +1,25 @@
+<form action="/<%= car.id %>" method="post">
+ <% if (car.id !== "") { %>
+   <input type="hidden" name="_method" value="put">
+ <% } %>
+
+ <label for="name"></label>
+ <input type="text" name="name" placeholder="model" value="<%= car.name %>">
+
+ <label for="price"></label>
+ <input type="text" name="price" placeholder="price" value="<%= car.price %>">
+
+ <label for="condition"></label>
+ <input type="text" name="condition" placeholder="condition" value="<%= car.condition%>">
+
+ <label for="year"></label>
+ <input type="text" name="year" placeholder="year" value="<%= car.year %>">
+
+ <label for="body"></label>
+ <input type="text" name="body" placeholder="year" value="<%= car.body %>">
+
+  <label for="color"></label>
+ <input type="text" name="color" placeholder="year" value="<%= car.color %>">
+
+ <input type="submit" value="go!">
+</form>
