@@ -60,7 +60,7 @@ function deleteCars(req , res) {
 function updateCars(req , res) {
   Car.findByIdAndUpdate(req.params.id, req.body, {new: true}, function(err, car) {
     if (err) return handleError(err);
-    res.redirect("/");
+    res.status(200).redirect("/");
   });
 }
 
@@ -69,7 +69,7 @@ function createCars(req , res) {
   var car = new Car(req.body);
   car.save(function(err, post) {
     if (err) return res.status(500).send(err.message);
-    res.redirect("/");
+    res.status(200).redirect("/");
   })  
 }
 
