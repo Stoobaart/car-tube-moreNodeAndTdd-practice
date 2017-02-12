@@ -12,7 +12,8 @@
     "body-parser": "^1.16.0",
     "ejs": "^2.5.5",
     "express-ejs-layouts": "^2.2.0",
-    "method-override": "^2.3.7"
+    "method-override": "^2.3.7",
+    "mongoose": "^4.8.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",

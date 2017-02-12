@@ -4,6 +4,11 @@ var layouts = require('express-ejs-layouts');
 var routes = require('./config/routes');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/cars', function() {
+	console.log("db connected");
+});
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride(function(req, res){

@@ -23,11 +23,11 @@ describe('API routes for the cars resource', function() {
 
   it('should list a SINGLE post on /<id> GET', function(done) {
     chai.request(app)
-      .get('/0')
+      .get('/589de1623eaf33774807a704')
       .end(function(err, res){
         res.should.have.status(200);
         res.should.be.html;
-        res.text.should.match(/Aston Martin DB7/);
+        res.text.should.match(/Mini One/);
         done();
       });
   });
